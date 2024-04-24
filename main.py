@@ -1,4 +1,3 @@
-import aiogram.fsm.context
 from aiogram import Bot, Dispatcher, types
 import markups as mk
 import config
