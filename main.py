@@ -7,7 +7,10 @@ from aiogram.fsm.context import FSMContext
 from datetime import datetime, timedelta
 import asyncio
 import re
+from django import setup
 from web.users.models import User, Task, TaskUser, Admin, SuperAdmin
+django.setup()
+
 
 bot = Bot(token=config.TOKEN)
 storage = MemoryStorage()
