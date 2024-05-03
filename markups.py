@@ -21,10 +21,9 @@ editMenu = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[[KeyboardButton(t
                                                                 KeyboardButton(text='Закрепленные люди')]],
                                one_time_keyboard=True)
 
-notifyButtons = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
-yes_button = KeyboardButton("Да", callback_data="Да")
-no_button = KeyboardButton("Нет", callback_data="Нет")
-notifyButtons.row(yes_button, no_button)
+yes_button = KeyboardButton(text="Да", callback_data="Да")
+no_button = KeyboardButton(text="Нет", callback_data="Нет")
+notifyButtons = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True, keyboard=[[yes_button, no_button]])
 
 
 def make_done_button(task_id):
